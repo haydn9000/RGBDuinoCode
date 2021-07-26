@@ -19,14 +19,14 @@ void setup()
 void loop()
 {
     analogWrite(2, brightness);
-    analogWrite(3, brightness);
+    analogWrite(3, brightness);  // ~ Analog
     analogWrite(4, brightness);
-    analogWrite(5, brightness);
-    analogWrite(6, brightness);
+    analogWrite(5, brightness);  // ~ Analog
+    analogWrite(6, brightness);  // ~ Analog
     analogWrite(7, brightness);
     analogWrite(8, brightness);
-    analogWrite(9, brightness);
-    analogWrite(10, brightness);
-    analogWrite(11, brightness);
+    analogWrite(9, brightness);  // ~ Analog
+    analogWrite(10, brightness);  // ~ Analog
+    analogWrite(11, brightness);  // ~ Analog
 }
 
