@@ -3,6 +3,7 @@ int brightness = 15;
 
 void setup()
 {
+    // Innitialize LED pins.     
     pinMode(2, OUTPUT);
     pinMode(3, OUTPUT);
     pinMode(4, OUTPUT);
@@ -18,15 +19,15 @@ void setup()
 // Some of these are not dimmable, fix this to reflect
 void loop()
 {
-    analogWrite(2, brightness);
-    analogWrite(3, brightness);  // ~ Analog
-    analogWrite(4, brightness);
-    analogWrite(5, brightness);  // ~ Analog
-    analogWrite(6, brightness);  // ~ Analog
-    analogWrite(7, brightness);
-    analogWrite(8, brightness);
-    analogWrite(9, brightness);  // ~ Analog
-    analogWrite(10, brightness);  // ~ Analog
-    analogWrite(11, brightness);  // ~ Analog
+    analogWrite(2, brightness);  // Digital pin
+    analogWrite(3, brightness);  // ~ Analog pin
+    analogWrite(4, brightness);  // Digital pin
+    analogWrite(5, brightness);  // ~ Analog pin
+    analogWrite(6, brightness);  // ~ Analog pin
+    analogWrite(7, brightness);  // Digital pin
+    analogWrite(8, brightness);  // Digital pin
+    analogWrite(9, brightness);  // ~ Analog pin
+    analogWrite(10, brightness);  // ~ Analog pin
+    analogWrite(11, brightness);  // ~ Analog pin
 }
 
