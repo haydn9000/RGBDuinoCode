@@ -7,7 +7,7 @@ void setup()
     pinMode(13, OUTPUT);
 }
 
-// Some of these are not dimmable, fix this to reflect
+
 void loop()
 {
     digitalWrite(12, HIGH);  // RGB light pin
