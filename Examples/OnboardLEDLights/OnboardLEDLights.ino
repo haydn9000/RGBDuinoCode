@@ -1,8 +1,8 @@
-int brightness = 15;
+int brightness = 15;  // Can be a value between 0-255.
 
 void setup()
 {
-    // Innitialize LED pins.     
+    // Innitialize onboard LED pins.
     pinMode(2, OUTPUT);
     pinMode(3, OUTPUT);
     pinMode(4, OUTPUT);
@@ -15,19 +15,29 @@ void setup()
     pinMode(11, OUTPUT);
 }
 
-// Some of these are not dimmable, fix this to reflect
-void loop()
+
+void turnONdigitalLEDs()
 {
-    digitalWrite(2, HIGH);  // Digital pin
-    digitalWrite(4, HIGH);  // Digital pin
-    digitalWrite(7, HIGH);  // Digital pin
-    digitalWrite(8, HIGH);  // Digital pin
-    
+    digitalWrite(2, HIGH); // Digital pin
+    digitalWrite(4, HIGH); // Digital pin
+    digitalWrite(7, HIGH); // Digital pin
+    digitalWrite(8, HIGH); // Digital pin
+}
+
+
+void turnONanalogLEDs()
+{
     analogWrite(3, brightness);  // ~ Analog pin
     analogWrite(5, brightness);  // ~ Analog pin
     analogWrite(6, brightness);  // ~ Analog pin
     analogWrite(9, brightness);  // ~ Analog pin
-    analogWrite(10, brightness);  // ~ Analog pin
-    analogWrite(11, brightness);  // ~ Analog pin
+    analogWrite(10, brightness); // ~ Analog pin
+    analogWrite(11, brightness); // ~ Analog pin
 }
 
+
+void loop()
+{
+    // turnONdigitalLEDs();
+    turnONanalogLEDs();
+}
