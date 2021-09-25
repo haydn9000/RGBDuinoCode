@@ -31,10 +31,10 @@ Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(1, RGB2, NEO_GRB + NEO_KHZ800);
 
 void setup()
 {
-    // Innitialize RGB
+    // Innitialize RGB strips
     strip1.begin();
     strip2.begin();
-    // Initialize all RGB pixels to "OFF"
+    // Initialize all RGB strips pixels to "OFF"
     strip1.show();
     strip2.show();
 }
@@ -43,17 +43,17 @@ void setup()
 void loop()
 {
     // setPixelColor takes 4 parameters, pixel number, r, g and b color values.
-    strip1.setPixelColor(0, strip1.Color((brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255))); // Red
+    strip1.setPixelColor(0, (brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255)); // Red
     strip1.show();
 
-    strip2.setPixelColor(0, strip2.Color((brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255)));  // Green
+    strip2.setPixelColor(0, (brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255));  // Green
     strip2.show();
     delay(500);
 
-    strip1.setPixelColor(0, strip1.Color((brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255)));  // Green
+    strip1.setPixelColor(0, (brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255));  // Green
     strip1.show();
 
-    strip2.setPixelColor(0, strip2.Color((brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255)));  // Red
+    strip2.setPixelColor(0, (brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255));  // Red
     strip2.show();
     delay(500);
 }
