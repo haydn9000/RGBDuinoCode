@@ -28,9 +28,10 @@ on a live circuit...if you must, connect GND first.
 Adafruit_NeoPixel strip1 = Adafruit_NeoPixel(1, RGB1, NEO_GRB + NEO_KHZ800);
 Adafruit_NeoPixel strip2 = Adafruit_NeoPixel(1, RGB2, NEO_GRB + NEO_KHZ800);
 
+
 void setup()
 {
-    // Innitialize RGB pins.
+    // Innitialize RGB
     strip1.begin();
     strip2.begin();
     // Initialize all RGB pixels to "OFF"
@@ -41,7 +42,11 @@ void setup()
 
 void loop()
 {
-    // digitalWrite(12, HIGH);  // RGB light pin
-    // digitalWrite(13, HIGH);  // RGB light pin
-}
+    strip1.setPixelColor(1, (0, 50, 0));  // Green
+    // strip1.setBrightness(50);
+    strip1.show();
 
+    strip2.setPixelColor(1, (0, 50, 0));  // Green
+    // strip2.setBrightness(50);
+    strip2.show();
+}
