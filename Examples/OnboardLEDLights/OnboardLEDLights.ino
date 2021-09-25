@@ -18,21 +18,21 @@ void setup()
 
 void turnONdigitalLEDs()
 {
-    digitalWrite(2, HIGH); // Digital pin
-    digitalWrite(4, HIGH); // Digital pin
-    digitalWrite(7, HIGH); // Digital pin
-    digitalWrite(8, HIGH); // Digital pin
+    digitalWrite(2, HIGH);  // Digital pin
+    digitalWrite(4, HIGH);  // Digital pin
+    digitalWrite(7, HIGH);  // Digital pin
+    digitalWrite(8, HIGH);  // Digital pin
 }
 
 
 void turnONanalogLEDs()
 {
-    analogWrite(3, brightness);  // ~ Analog pin
-    analogWrite(5, brightness);  // ~ Analog pin
-    analogWrite(6, brightness);  // ~ Analog pin
-    analogWrite(9, brightness);  // ~ Analog pin
-    analogWrite(10, brightness); // ~ Analog pin
-    analogWrite(11, brightness); // ~ Analog pin
+    analogWrite(3, brightness);   // ~ Analog pin
+    analogWrite(5, brightness);   // ~ Analog pin
+    analogWrite(6, brightness);   // ~ Analog pin
+    analogWrite(9, brightness);   // ~ Analog pin
+    analogWrite(10, brightness);  // ~ Analog pin
+    analogWrite(11, brightness);  // ~ Analog pin
 }
 
 
