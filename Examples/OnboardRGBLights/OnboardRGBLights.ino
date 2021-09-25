@@ -7,7 +7,7 @@
 #define RGB1 12  // Onboard RGB pin
 #define RGB2 13  // Onboard RGB pin
 
-int brightness = 15;
+int brightness = 15;  // Can be a value between 0-255.
 
 /*
 Parameter 1 = number of pixels in strip1
@@ -42,11 +42,13 @@ void setup()
 
 void loop()
 {
-    strip1.setPixelColor(1, (0, 50, 0));  // Green
-    // strip1.setBrightness(50);
+    strip1.setPixelColor(0, strip1.Color(0, 255, 0));  // Green
+    strip1.setBrightness(brightness);
     strip1.show();
+    delay(100);
 
-    strip2.setPixelColor(1, (0, 50, 0));  // Green
-    // strip2.setBrightness(50);
+    strip2.setPixelColor(0, strip2.Color(0, 255, 0));  // Green
+    strip2.setBrightness(brightness);
     strip2.show();
+    delay(100);
 }
