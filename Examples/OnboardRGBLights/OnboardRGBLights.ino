@@ -7,10 +7,10 @@
 #define RGB1 12  // Onboard RGB pin
 #define RGB2 13  // Onboard RGB pin
 
-int brightness = 15;  // Can be a value between 0-255.
+int brightness = 1;  // Can be a value between 0-255.
 
 /*
-Parameter 1 = number of pixels in strip1
+Parameter 1 = pixels number in strip
 Parameter 2 = Arduino pin number (most are valid)
 Parameter 3 = pixel type flags, add together as needed:
   NEO_KHZ800  800 KHz bitstream (most NeoPixel products w/WS2812 LEDs)
@@ -42,13 +42,18 @@ void setup()
 
 void loop()
 {
-    strip1.setPixelColor(0, strip1.Color(0, 255, 0));  // Green
-    strip1.setBrightness(brightness);
+    // setPixelColor takes 4 parameters, pixel number, r, g and b color values.
+    strip1.setPixelColor(0, strip1.Color((brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255))); // Red
     strip1.show();
-    delay(100);
 
-    strip2.setPixelColor(0, strip2.Color(0, 255, 0));  // Green
-    strip2.setBrightness(brightness);
+    strip2.setPixelColor(0, strip2.Color((brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255)));  // Green
     strip2.show();
-    delay(100);
+    delay(500);
+
+    strip1.setPixelColor(0, strip1.Color((brightness * 0 / 255), (brightness * 255 / 255), (brightness * 0 / 255)));  // Green
+    strip1.show();
+
+    strip2.setPixelColor(0, strip2.Color((brightness * 255 / 255), (brightness * 0 / 255), (brightness * 0 / 255)));  // Red
+    strip2.show();
+    delay(500);
 }
